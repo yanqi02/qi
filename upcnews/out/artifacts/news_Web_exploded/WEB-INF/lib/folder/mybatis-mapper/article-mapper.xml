@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="upcnews.dao.ArticleDao">
+    <select id="listArticle" resultType="upcnews.bean.Article">
+        select * from article where status=#{status}
+    </select>
+    <select id="listArticleByAuthor" resultType="upcnews.bean.Article">
+        select * from article where status=#{status} and author=#{author}
+    </select>
+    <insert id="addArticle" useGeneratedKeys="true" keyProperty="ArticleId" parameterType="upcnews.bean.Article">
+        insert into article(articleName,context,author,status,articleId)
+        values(#{articleName},#{context},#{author},#{status},#{articleId})
+    </insert>
+    <update id="approve" parameterType="int">
+        update article set articleId=1 where articleId=#{articleId}
+    </update>
+
+</mapper>
