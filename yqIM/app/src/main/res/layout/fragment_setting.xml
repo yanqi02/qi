@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:hyphenate="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <TextView
+    <com.hyphenate.easeui.widget.EaseTitleBar
+        android:id="@+id/title_bar"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="设置"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:background="@color/btn_blue_normal"/>
+        android:layout_height="wrap_content"
+        hyphenate:titleBarTitle="设置
+"
+        />
 <Button
     android:id="@+id/bt_setting_logout"
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:textSize="30sp"
     android:text="退出"
-    android:background="@color/holo_red_light"
+    android:background="@drawable/yuanjiao_red"
     />
 
 </LinearLayout>

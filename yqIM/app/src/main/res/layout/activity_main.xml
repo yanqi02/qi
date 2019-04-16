@@ -20,7 +20,8 @@
 
 <RadioButton
     android:id="@+id/rb_main_chat"
-    android:text="会话"
+    android:text="消息"
+
     android:layout_width="0dp"
     android:layout_height="match_parent"
     android:layout_weight="1"
@@ -31,7 +32,7 @@
 
         <RadioButton
             android:id="@+id/rb_main_contact"
-            android:text="联系人"
+            android:text="好友"
             android:gravity="center"
             android:layout_width="0dp"
             android:layout_height="match_parent"

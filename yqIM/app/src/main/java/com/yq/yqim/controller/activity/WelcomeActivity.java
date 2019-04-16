@@ -43,6 +43,9 @@ public class WelcomeActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
 else {
+    //登陆成功后的方法
+                        Model.getInstance().loginSuccess(user);
+
                         Intent intent=new Intent(WelcomeActivity.this, MainActivity.class);
                         startActivity(intent);
 

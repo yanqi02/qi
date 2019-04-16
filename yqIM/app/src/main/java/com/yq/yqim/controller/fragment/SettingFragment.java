@@ -18,7 +18,7 @@ import com.yq.yqim.controller.activity.LoginActivity;
 import com.yq.yqim.model.Model;
 
 
-public class SettingFragment     extends Fragment {
+public class SettingFragment  extends Fragment {
     private Button bt_setting_out;
     @Nullable
     @Override
@@ -52,6 +52,8 @@ public class SettingFragment     extends Fragment {
                         EMClient.getInstance().logout(false, new EMCallBack() {
                             @Override
                             public void onSuccess() {
+                                //关闭DBHelper
+                                Model.getInstance().getDbManager().close();
                                 //回到登录页面
                                 getActivity().runOnUiThread(new Runnable() {
                                     @Override
