@@ -47,7 +47,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.13</version>
+            <version>8.0.16</version>
         </dependency>
         <!-- 2.Spring dao依赖 -->
         <!-- spring-jdbc包括了一些如jdbcTemplate的工具类 -->
